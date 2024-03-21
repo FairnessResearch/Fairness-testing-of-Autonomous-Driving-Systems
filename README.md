@@ -159,7 +159,7 @@ In this section, we provide a detailed description of the experimental settings 
 In particular, all experiments were performed on a system equipped with 64GB RAM, 2.5GHz Intel Xeon (R) v3 Dual CPUs, and one NVIDIA GeForce RTX 2080 Ti GPU. YOLOX, RetinaNet, Faster RCNN, and Cascade RCNN were implemented using PyTorch 1.8.1 and Python 3.7.10 on Ubuntu 18.04 LTS, following the MMdetection configuration. CSP and MGAN utilized PyTorch 1.10.0 and Python 3.8.10 on Ubuntu 18.04 LTS, adhering to the Pedestron configuration. Finally, ALFNet and PRNet  were implemented using Keras 2.0.6, Tensorflow 1.4.0, and Python 2.7.18 on Ubuntu 16.04 LTS following the instruction and configuration in the public framework they released.
 
 For accessibility, all the public models we used can be downloaded from the google drive link:
-https://drive.google.com/file/d/1Cys9n8_nrBsszEOt4W3RhgIkimmtlQ5q/view?usp=drive_link
+https://drive.google.com/drive/folders/1VbrgYa1tCZraGBs0cfZmiSY23gle5GAv?usp=sharing
 
 The predicted results from each model can be found in the "DT" directory as previously mentioned.
 
