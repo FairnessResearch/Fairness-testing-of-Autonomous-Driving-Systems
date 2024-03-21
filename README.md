@@ -4,11 +4,13 @@ Welcome to the online appendix for the paper entitled "Unveiling the Blind Spots
 
 ## Datasets
 
-In this directory, we present the datasets used in our experiments. The "Datasets" directory is organized into two aspects: the four testing datasets we used in RQ1 (overall) and the partitioned datasets in each scenario (partitioned) in RQ2. The structure of the directory is as follows (the numbers in parentheses represent the number of images in each folder):
+In this directory, we present the datasets used in our experiments. The "Datasets" directory is organized into three aspects: the four testing datasets we used in RQ1 (overall), the partitioned datasets in each scenario (partitioned) in RQ2 and all the images that contain ground-truth persons labels(these images used for partitioning in RQ2). The structure of the directory is as follows (the numbers in parentheses represent the number of images in each folder):
 
 ```
 Datasets
 |
+|-- image_person
+|   |-- image_person(#5,933)
 |-- overall
 |   |-- citypersons(#1,525)
 |   |-- ecp_day (#2,427)
