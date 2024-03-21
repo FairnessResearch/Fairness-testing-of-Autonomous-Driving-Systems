@@ -41,7 +41,7 @@ In addition,  we also provide the partitioned datasets from the scenario labelin
 In the "Labels" directory, we provide the labels used in our experiments. This folder is divided into two main parts. The first part includes the labels for RQ1: Overall Fairness ("RQ1_overall" sub-directory), containing ground-truth labels for the four testing datasets. These labels are organized based on four testing datasets. The second part encompasses the labels for RQ2: Fairness in Different Scenarios ("RQ2_partitioned" sub-directory).  These labels are categorized based on fine-grained scenarios we discussed.
 
 This directory can also be downloaded in the provided google drive link:
-https://drive.google.com/file/d/1ufFX3E8E7ncKn0ab53A9HUb3by5_MOxV/view?usp=drive_link
+https://drive.google.com/drive/folders/1VbrgYa1tCZraGBs0cfZmiSY23gle5GAv?usp=sharing
 
 ### 1. RQ1 Overall Fairness (RQ1_overall)
 
@@ -144,7 +144,7 @@ RQ2_partitioned
          	|-- yolox, retinanet, faster rcnn, cascade rcnn, alfnet, prnet, csp, mgan
 ```
 
-Within each scenario (brightness, contrast, and weather), there are corresponding "GT" and "DT" directories. The structure of the "GT" directories' meaning is identical to that in RQ1_overall, containing ground-truth labels for each attribute. The "DT" directories also store the predicted labels from the eight pedestrian detectors.  At the same time,  as mentioned in Section 3.3.3, we provide the contrast values for all images containing labeled pedestrians with a total of 5,917 images. These values can be found in the `contrast-level.txt`.
+Within each scenario (brightness, contrast, and weather), there are corresponding "GT" and "DT" directories. The structure of the "GT" directories' meaning is identical to that in RQ1_overall, containing ground-truth labels for each attribute. The "DT" directories also store the predicted labels from the eight pedestrian detectors.  At the same time,  as mentioned in Section 3.3.3, we provide the contrast values for all images containing labeled pedestrians with a total of 5,933 images. These values can be found in the `contrast-level.txt`.
 
 ## Pedestrian Detection Models
 
@@ -159,7 +159,7 @@ In this section, we provide a detailed description of the experimental settings 
 In particular, all experiments were performed on a system equipped with 64GB RAM, 2.5GHz Intel Xeon (R) v3 Dual CPUs, and one NVIDIA GeForce RTX 2080 Ti GPU. YOLOX, RetinaNet, Faster RCNN, and Cascade RCNN were implemented using PyTorch 1.8.1 and Python 3.7.10 on Ubuntu 18.04 LTS, following the MMdetection configuration. CSP and MGAN utilized PyTorch 1.10.0 and Python 3.8.10 on Ubuntu 18.04 LTS, adhering to the Pedestron configuration. Finally, ALFNet and PRNet  were implemented using Keras 2.0.6, Tensorflow 1.4.0, and Python 2.7.18 on Ubuntu 16.04 LTS following the instruction and configuration in the public framework they released.
 
 For accessibility, all the public models we used can be downloaded from the google drive link:
-https://drive.google.com/drive/folders/1VbrgYa1tCZraGBs0cfZmiSY23gle5GAv?usp=sharing
+
 
 The predicted results from each model can be found in the "DT" directory as previously mentioned.
 
