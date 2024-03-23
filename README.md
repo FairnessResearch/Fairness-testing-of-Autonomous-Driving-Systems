@@ -126,15 +126,14 @@ RQ2_partitioned
 |        	|-- day,night
 |        	 	|-- yolox, retinanet, faster rcnn, cascade rcnn, alfnet, prnet, csp, mgan
 |-- contrast
-|   |-- five_contrast_levels
+|   |-- 3_contrast_levels
 |       |-- GT
-|        	|-- level1,level2, level3, level4, level5
+|        	|-- level1,level2, level3
 |        	 	|-- gender, age, skin
 |       |-- DT
-|       	|-- level1,level2, level3, level4, level5
+|       	|-- level1,level2, level3
 |       	 	|-- yolox, retinanet, faster rcnn, cascade rcnn, alfnet, prnet, csp, mgan
-|       |-- rms-info
-|       	|-- contrast-level.txt
+|       |-- contrast-level.txt
 |-- weather
     |-- GT
         |-- rainy, non-rainy
