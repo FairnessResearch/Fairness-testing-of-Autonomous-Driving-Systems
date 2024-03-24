@@ -247,7 +247,7 @@ You can use the `bash` command to run the shell scripts in bulk and generate the
   bash "./evaluation/scripts/table_figure/table8.sh"
   ```
 
-Additionally, we have included the necessary scripts in the `./evaluation/scripts/fig 3` directory to generate Figure 3 from our paper. These scripts can be found in the `./evaluation/scripts/fig 3` folder.
+Additionally, we have included the necessary scripts in the `./evaluation/scripts/fig3` directory to generate Figure 3 from our paper. These scripts can be found in the `./evaluation/scripts/fig3` folder.
 
 All the organized results, including those for RQ1 and RQ2, will be conveniently presented in the "Results" directory.
 
