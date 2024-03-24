@@ -223,7 +223,7 @@ The script `evaluation.py` offers three selectable parameters for customization:
 
 By customizing these parameters, you can perform evaluations and analysis for different sensitive attributes, experiment with various ground-truth and predicted labels, and explore fairness in pedestrian detection across different scenarios.
 
-For the convenience of generating the raw results for all figures and tables, we have included shell scripts in the folder `./evaluation/scripts/table_figure/`. These scripts facilitate the quick production of results, which will be stored in the folder `./evaluation/scripts/raw_results/`.
+For the convenience of generating the raw results for all figures and tables, we have included shell scripts in the `./evaluation/scripts/table_figure/` folder. These scripts facilitate the quick production of results, which will then be stored accordingly in the `./evaluation/scripts/raw_results/` folder.
 
 Here is a presentation demo:
 
@@ -247,15 +247,14 @@ You can use the `bash` command to run the shell scripts in bulk and generate the
   bash "./evaluation/scripts/table_figure/table8.sh"
   ```
 
-Similarly, to generate the results for Table 6, Figure 1, and Figure 2 in RQ1, as well as Table 7, Figure 4, and Table 8 in RQ2, you can repeat the execution and change the paths accordingly, then record the output results. To ensure the reproducibility of the results presented in <u>Section 4</u>, we have provided a "scripts input guideline" in the "generate_scripts" folder. This folder contains various script files, such as `fig1_fig2_table6_scripts.txt`, `fig4_scripts.txt`, `fig5_scripts.txt`, `table7_scripts.txt`, and `table8_scripts.txt`, which will aid in generating and recording the corresponding results accurately.
+Additionally, we have included the necessary scripts in the `./evaluation/scripts/fig 3` directory to generate Figure 3 from our paper. These scripts can be found in the `./evaluation/scripts/fig 3` folder.
 
-All the recorded results, including those for RQ1 and RQ2, will be conveniently presented in the "Results" directory. 
+All the organized results, including those for RQ1 and RQ2, will be conveniently presented in the "Results" directory.
 
-Additionally,  we also include the necessary scripts in "fig 3" directory to generate Figure 3 from our paper. These scripts are available in the "fig 3" folder.
 
 ### 3. Scenario Split
 
-The scripts `contrast-rms.py` serve the purpose of partitioning images into five distinct contrast levels, respectively. These scripts encompass the computation methods such as RMS contrast used for dividing the datasets. As part of our efforts, we have already organized all the images into their respective categories and made them accessible in the "Dataset" part, which already provided the source link.
+The scripts `contrast-rms.py` serve the purpose of partitioning images into three distinct contrast levels, respectively. These scripts encompass the computation methods such as RMS contrast used for dividing the datasets. As part of our efforts, we have already organized all the images into their respective categories and made them accessible in the "dataset" part, which already provided the source link.
 
 ## Results
 
