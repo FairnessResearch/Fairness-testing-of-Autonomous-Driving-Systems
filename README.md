@@ -4,10 +4,10 @@ Welcome to the online appendix for the paper entitled "Unveiling the Blind Spots
 
 ## Datasets
 
-In this directory, we present the datasets used in our experiments. The "Datasets" directory is organized into three aspects: the four testing datasets we used in RQ1 (overall), the partitioned datasets in each scenario (partitioned) in RQ2 and all the images that contain ground-truth persons labels(these images used for partitioning in RQ2). The structure of the directory is as follows (the numbers in parentheses represent the number of images in each folder):
+In this directory, we present the datasets utilized in our experiments. The "datasets" directory is organized around three aspects: the four testing datasets used in RQ1 (overall), the partitioned datasets in each scenario (partitioned) in RQ2, and all images containing ground-truth person labels (used for partitioning in RQ2). The directory structure is as follows (numbers in parentheses indicate the number of images in each folder):
 
 ```
-Datasets
+datasets
 |
 |-- image_person
 |   |-- image_person(#5,933)
@@ -33,7 +33,7 @@ https://drive.google.com/drive/folders/17jwRiQ-Oum60ZUN_l2tlw2adce0Ej3gX?usp=sha
 
 The four benchmark testing datasets used in our experiments, as described in <u>Section 3.3.1</u>. The datasets are detailed in "*Table 2: Benchmark Datasets*" in our academic paper, providing information on the number of images and the time of capture for each dataset. 
 
-In addition,  we also provide the partitioned datasets from the scenario labeling discussed in <u>Section 3.3.3</u>. The scripts employed for partitioning these datasets can be located in the "Scripts" directory.  RQ2 focuses on real-world key scenarios, each having its respective sub-folder: brightness, contrast, and weather. Detailed information is presented in "*Table 5: Number of images in different brightness levels, contrast levels, and weather conditions*."
+In addition,  we also provide the partitioned datasets from the scenario labeling discussed in <u>Section 3.3.3</u>. The scripts used to partition these datasets into three contrast levels are located in the "evaluation/scripts" directory.  RQ2 focuses on real-world key scenarios, each having its respective sub-folder: brightness, contrast, and weather. Detailed information is presented in "*Table 5: Number of images in different brightness levels, contrast levels, and weather conditions*."
 
 
 ## Labels
