@@ -206,8 +206,8 @@ pip install pandas
 pip install statsmodels
 pip install cv2
 ```
-
-You have to move this directory, and unzip the `labels.zip` parallel to the "scripts" folder. 
+Please download the `labels.zip` file from https://drive.google.com/drive/folders/1VbrgYa1tCZraGBs0cfZmiSY23gle5GAv?usp=sharing
+After downloading, unzip the `labels.zip` file so that it is located parallel to the "scripts" folder, not inside it. This ensures the proper organization of your project files.
 
 ```
 cd ./Fairness-Testing-of-Autonomous-Driving-Systems
@@ -218,43 +218,34 @@ cd ./Fairness-Testing-of-Autonomous-Driving-Systems
 The script `evaluation.py` offers three selectable parameters for customization:
 
 - `--attribute`: This parameter allows you to choose the sensitive attribute that you want to investigate. You can specify the attribute such as "gender," "age," or "skin" to focus on a particular aspect of the evaluation.
-- `--gt-path`: This parameter is used to specify the input path for the ground-truth labels (GT). You need to provide the path to the GT directory that contains the labels for the chosen attribute in the "Labels" directory.
-- `--dt-path`: This parameter is used to specify the paths for the eight pedestrian detectors' predicted labels (DT). You need to provide the paths to the corresponding DT directories containing eight pedestrian detector's predictions for the chosen attribute "Labels" .
+- `--gt-path`: This parameter is used to specify the input path for the ground-truth labels (GT). You need to provide the path to the GT directory that contains the labels for the chosen attribute in the "labels" directory.
+- `--dt-path`: This parameter is used to specify the paths for the eight pedestrian detectors' predicted labels (DT). You need to provide the paths to the corresponding DT directories containing eight pedestrian detector's predictions for the chosen attribute "labels" .
 
 By customizing these parameters, you can perform evaluations and analysis for different sensitive attributes, experiment with various ground-truth and predicted labels, and explore fairness in pedestrian detection across different scenarios.
 
-Here is an presentation demo.
+For the convenience of generating the raw results for all figures and tables, we have included shell scripts in the folder `./evaluation/scripts/table_figure/`. These scripts facilitate the quick production of results, which will be stored in the folder `./evaluation/scripts/raw_results/`.
+
+Here is a presentation demo:
 
 **Demo**
+You can use the `bash` command to run the shell scripts in bulk and generate the corresponding results mentioned in our paper. For instance:
 
-Suppose you want to calculate the statistics for the `skin` attribute in both the "day-time" and "night-time" scenarios, as presented in Table 7, you can execute the following commands in the terminal:
-
-Step 1: Obtain data for the "day time" scenario:
-
-```
-python .\evaluation\evaluation.py --attribute skin --gt_path '..\Labels\RQ2_Partitioned\brightness\day_night\GT\day\skin' --dt_path '..\Labels\RQ2_Partitioned\brightness\day_night\DT\day'
-```
-
-Output:
-
-```
-
-```
-
-Step 2: Obtain data for the "night-time" scenario:
-
-Run the following command in the terminal:
-
-```
-python .\evaluation\evaluation.py --attribute skin --gt_path '..\Labels\RQ2_Partitioned\brightness\day_night\GT\night\skin' --dt_path '..\Labels\RQ2_Partitioned\brightness\day_night\DT\night'
-```
-
-Output:
-
-```
-
-
-```
+- For Table 6, Figure 1, and Figure 2 in RQ1, use the following command:
+  ```
+  bash "./evaluation/scripts/table_figure/fig1_fig2_table6.sh"
+  ```
+- For Figure 4, use:
+  ```
+  bash "./evaluation/scripts/table_figure/fig4.sh"
+  ```
+- For Table 7, use:
+  ```
+  bash "./evaluation/scripts/table_figure/table7.sh"
+  ```
+- For Table 8, use:
+  ```
+  bash "./evaluation/scripts/table_figure/table8.sh"
+  ```
 
 Similarly, to generate the results for Table 6, Figure 1, and Figure 2 in RQ1, as well as Table 7, Figure 4, and Table 8 in RQ2, you can repeat the execution and change the paths accordingly, then record the output results. To ensure the reproducibility of the results presented in <u>Section 4</u>, we have provided a "scripts input guideline" in the "generate_scripts" folder. This folder contains various script files, such as `fig1_fig2_table6_scripts.txt`, `fig4_scripts.txt`, `fig5_scripts.txt`, `table7_scripts.txt`, and `table8_scripts.txt`, which will aid in generating and recording the corresponding results accurately.
 
