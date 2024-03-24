@@ -38,16 +38,16 @@ In addition,  we also provide the partitioned datasets from the scenario labelin
 
 ## Labels
 
-In the "Labels" directory, we provide the labels used in our experiments. This folder is divided into two main parts. The first part includes the labels for RQ1: Overall Fairness ("RQ1_overall" sub-directory), containing ground-truth labels for the four testing datasets. These labels are organized based on four testing datasets. The second part encompasses the labels for RQ2: Fairness in Different Scenarios ("RQ2_partitioned" sub-directory).  These labels are categorized based on fine-grained scenarios we discussed.
+In the "labels" directory, we provide the labels used in our experiments. This folder is divided into two main sections. The first section contains the labels for RQ1: Overall Fairness, located in the "RQ1_overall" sub-directory. It includes ground-truth labels and predicted labels for the four testing datasets, organized according to the datasets. The second section covers the labels for RQ2: Fairness in Different Scenarios, found in the "RQ2_partitioned" sub-directory. These labels are categorized based on the fine-grained scenarios we discussed.
 
 This directory can also be downloaded in the provided google drive link:
 https://drive.google.com/drive/folders/1VbrgYa1tCZraGBs0cfZmiSY23gle5GAv?usp=sharing
 
 ### 1. RQ1 Overall Fairness (RQ1_overall)
 
-The "Labels" folder is structured as follows. The "GT" subdirectory contains ground-truth labels for each of the four testing datasets: "bdd100k," "citypersons," "ecp_day," and "ecp_night." Within this directory, the labels are further categorized based on their attributes and stored in corresponding sub-folders.
+The "labels" folder is structured as follows. The "GT" subdirectory contains ground-truth labels for each of the four testing datasets: "bdd100k," "citypersons," "eurocity_day," and "eurocity_night". Within this directory, the labels are further categorized based on their attributes and stored in corresponding sub-folders.
 
-Similarly, the "DT" subdirectory is also organized according to the four testing datasets: "bdd100k," "citypersons," "ecp_day," and "ecp_night." It contains predicted labels from eight pedestrian detectors for each dataset. The predicted labels are stored in sub-folders named after the respective detectors, such as "yolox," "retinanet," "faster rcnn," "cascade rcnn," "alfnet," "prnet," "csp," and "mgan."
+Similarly, the "DT" subdirectory is organized according to the four testing datasets: "bdd100k," "citypersons," "eurocity_day," and "eurocity_night." It contains predicted labels from eight pedestrian detectors for each dataset. The predicted labels are stored in sub-folders named after the respective detectors, such as "yolox," "retinanet," "faster rcnn," "cascade rcnn," "alfnet," "prnet," "csp," and "mgan." Each detector has 10 inference results, corresponding to "results_0" through "results_9."
 
 ```
 RQ1_overall
@@ -63,13 +63,41 @@ RQ1_overall
 |       |-- gender, age
 |-- DT
     |-- bdd100k
-    |   |-- yolox, retinanet, faster rcnn, cascade rcnn, alfnet, prnet, csp, mgan
+    |   |-- yolox (results_0-results_9)
+    |   |-- retinanet (results_0-results_9)
+    |   |-- faster rcnn (results_0-results_9)
+    |   |-- cascade rcnn (results_0-results_9)
+    |   |-- alfnet (results_0-results_9)
+    |   |-- prnet (results_0-results_9)
+    |   |-- csp (results_0-results_9)
+    |   |-- mgan (results_0-results_9)
     |-- citypersons
-    |   |-- yolox, retinanet, faster rcnn, cascade rcnn, alfnet, prnet, csp, mgan
+    |   |-- yolox (results_0-results_9)
+    |   |-- retinanet (results_0-results_9)
+    |   |-- faster rcnn (results_0-results_9)
+    |   |-- cascade rcnn (results_0-results_9)
+    |   |-- alfnet (results_0-results_9)
+    |   |-- prnet (results_0-results_9)
+    |   |-- csp (results_0-results_9)
+    |   |-- mgan (results_0-results_9)
     |-- ecp_day
-    |   |-- yolox, retinanet, faster rcnn, cascade rcnn, alfnet, prnet, csp, mgan
+    |   |-- yolox (results_0-results_9)
+    |   |-- retinanet (results_0-results_9)
+    |   |-- faster rcnn (results_0-results_9)
+    |   |-- cascade rcnn (results_0-results_9)
+    |   |-- alfnet (results_0-results_9)
+    |   |-- prnet (results_0-results_9)
+    |   |-- csp (results_0-results_9)
+    |   |-- mgan (results_0-results_9)
     |-- ecp_night
-        |-- yolox, retinanet, faster rcnn, cascade rcnn, alfnet, prnet, csp, mgan
+    |   |-- yolox (results_0-results_9)
+    |   |-- retinanet (results_0-results_9)
+    |   |-- faster rcnn (results_0-results_9)
+    |   |-- cascade rcnn (results_0-results_9)
+    |   |-- alfnet (results_0-results_9)
+    |   |-- prnet (results_0-results_9)
+    |   |-- csp (results_0-results_9)
+    |   |-- mgan (results_0-results_9)
 ```
 
 The GT and DT format is explained as follows:
