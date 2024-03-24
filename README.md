@@ -106,7 +106,7 @@ The GT and DT format is explained as follows:
 
 The "GT" directory contains ground-truth labels for each dataset, as detailed in "*Table 4: Number of labeled pedestrian instances per dataset.*" in our academic paper. We provide formulated skin tone, age and gender labels on all four testing datasets. 
 
-Each image's ground truth label is stored in a separate TXT file within the corresponding attribute's folder. For example, in the "cp" dataset, the gender label for the image `berlin_000003_000019_leftImg8bit.png` can be found in the file `berlin_000003_000019_leftImg8bit.txt` within the `./Labels/RQ1_overall/GT/citypersons/gender/` directory. Each TXT file can contain labels for multiple individuals present in the image.
+Each image's ground truth label is stored in a separate TXT file within the corresponding attribute's folder. For example, in the "cp" dataset, the gender label for the image `berlin_000003_000019_leftImg8bit.png` can be found in the file `berlin_000003_000019_leftImg8bit.txt` within the `./evaluation/labels/RQ1_overall/GT/citypersons/gender/` directory. Each TXT file can contain labels for multiple individuals present in the image.
 
 The manual labeling process was performed using LabelImg, with the original format being in YOLO format. We have formulated each label's format in a more precise way, the formulated GT label for each person is represented using a *five-digit format*, taking gender as an example:
 
@@ -152,7 +152,7 @@ RQ2_partitioned
 |        	 	|-- gender, age, skin
 |       |-- DT
 |        	|-- day,night
-|        	 	|-- yolox, retinanet, faster rcnn, cascade rcnn, alfnet, prnet, csp, mgan
+|        	 	|-- yolox, retinanet, faster rcnn, cascade rcnn, alfnet, prnet, csp, mgan (results_0-results_9)
 |-- contrast
 |   |-- 3_contrast_levels
 |       |-- GT
@@ -160,7 +160,7 @@ RQ2_partitioned
 |        	 	|-- gender, age, skin
 |       |-- DT
 |       	|-- level1,level2, level3
-|       	 	|-- yolox, retinanet, faster rcnn, cascade rcnn, alfnet, prnet, csp, mgan
+|       	 	|-- yolox, retinanet, faster rcnn, cascade rcnn, alfnet, prnet, csp, mgan (results_0-results_9)
 |       |-- contrast-level.txt
 |-- weather
     |-- GT
@@ -168,10 +168,10 @@ RQ2_partitioned
          	|-- gender, age, skin
     |-- DT
         |-- rainy, non-rainy
-         	|-- yolox, retinanet, faster rcnn, cascade rcnn, alfnet, prnet, csp, mgan
+         	|-- yolox, retinanet, faster rcnn, cascade rcnn, alfnet, prnet, csp, mgan (results_0-results_9)
 ```
 
-Within each scenario (brightness, contrast, and weather), there are corresponding "GT" and "DT" directories. The structure of the "GT" directories' meaning is identical to that in RQ1_overall, containing ground-truth labels for each attribute. The "DT" directories also store the predicted labels from the eight pedestrian detectors.  At the same time,  as mentioned in Section 3.3.3, we provide the contrast values for all images containing labeled pedestrians with a total of 5,933 images. These values can be found in the `contrast-level.txt`.
+Within each scenario (brightness, contrast, and weather), there are corresponding "GT" and "DT" directories. The structure of the "GT" directories' meaning is identical to that in RQ1_overall, containing ground-truth labels for each attribute. The "DT" directories also store the predicted labels from the eight pedestrian detectors.  At the same time,  as mentioned in Section 3.3.3, we provide the contrast values for all images containing labeled pedestrians with a total of 5,933 images. These values can be found in the `./evaluation/scripts/scenario_split/contrast-level.txt`.
 
 ## Pedestrian Detection Models
 
@@ -192,9 +192,9 @@ The predicted results from each model can be found in the "DT" directory as prev
 
 
 ## Scripts
-In this section, we provide the computational code for <u>Section 4</u> of the paper.  The "evaluation" folder contains the essential code for generating Table 6, Figure 1, Figure 2, Figure 3, Table 7, Figure 4, and Table 8. Additionally, it includes a demonstration example for computing evaluation metrics and performing statistical analysis. The "scenario_split" folder offers the code used in Section 3.3.3 of the paper, specifically for partitioning datasets based on five brightness and contrast levels.  
+In this section, we provide the computational code for <u>Section 4</u> of the paper.  The "evaluation" folder contains the essential code for generating Table 6, Figure 1, Figure 2, Figure 3, Table 7, Figure 4, and Table 8. Additionally, it includes a demonstration example for computing evaluation metrics and performing statistical analysis. The "scenario_split" folder offers the code used in Section 3.3.3 of the paper, specifically for partitioning datasets based on three contrast levels.  
 
-For obtaining our results, you will only need to use the organized "Labels" folder and some of the scripts provided in these directories. The "evaluation" folder will be instrumental in generating the evaluation results and figures, while the "scenario_split" folder will help in investigating fairness in different scenarios. 
+For obtaining our results, you will only need to use the organized "labels" folder and some of the scripts provided in these directories. The "evaluation" folder will be instrumental in generating the evaluation results and figures, while the "scenario_split" folder will help in investigating fairness in different scenarios. 
 
 ### 1. Installation
 
@@ -206,10 +206,11 @@ pip install pandas
 pip install statsmodels
 pip install cv2
 ```
-You have to move this directory, and unzip the `Labels.zip` parallel to the Scripts folder. 
+
+You have to move this directory, and unzip the `labels.zip` parallel to the "scripts" folder. 
 
 ```
-cd /Fairness-Testing-of-Autonomous-Driving-Systems/Scripts/
+cd ./Fairness-Testing-of-Autonomous-Driving-Systems
 ```
 
 ### 2. Evaluation
