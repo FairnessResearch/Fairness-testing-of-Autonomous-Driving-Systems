@@ -1,4 +1,4 @@
-# Fairness-testing-of-Autonomous-Driving-Systems
+# Fairness-Testing-of-Autonomous-Driving-Systems
 
 Welcome to the online appendix for the paper entitled "Bias Behind the Wheel: Fairness Testing of Autonomous Driving Systems". Here, we provide supplementary materials including raw results,  datasets and sensitive attributes labels, Python code for the analysis process, and scripts to replicate our experiments.
 
