@@ -1,6 +1,6 @@
 # Fairness-testing-of-Autonomous-Driving-Systems
 
-Welcome to the online appendix for the paper entitled "Unveiling the Blind Spots: A Critical Examination of Fairness in  Autonomous Driving Systems". Here, we provide supplementary materials including raw results,  datasets and sensitive attributes labels, Python code for the analysis process, and scripts to replicate our experiments.
+Welcome to the online appendix for the paper entitled "Bias Behind the Wheel: Fairness Testing of Autonomous Driving Systems". Here, we provide supplementary materials including raw results,  datasets and sensitive attributes labels, Python code for the analysis process, and scripts to replicate our experiments.
 
 ## Datasets
 
